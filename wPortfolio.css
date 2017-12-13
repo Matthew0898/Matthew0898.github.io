@@ -5,22 +5,10 @@
 	align-content:center;
 	text-align:center;
 	}
-#navbar{ 
-	list-style-type:none;
-	margin: 0;
-	padding: 0;
-	background-color:#000000;
-	
-}
-li {
-	float: left;
+#navbar{
+	background-color:black;
 	}
-li a{
-	display: block;
-	text-align:center;
-	padding-right:20px;
-}
-.navbar_list{
+#navbar a{
 	color:white;
 	text-decoration:none;
 }
@@ -46,4 +34,7 @@ li a{
 	align-content:center;
 	text-align:center;
 	}
-	
+#home{ 
+	text-decoration:none;
+	color:black;
+	}
