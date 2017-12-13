@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+#page_header{
+	align-content:center;
+	text-align:center;
+	}
+#navbar{ 
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+	background-color:#000000;
+	
+}
+li {
+	float: left;
+	}
+li a{
+	display: block;
+	text-align:center;
+	padding-right:20px;
+}
+.navbar_list{
+	color:white;
+	text-decoration:none;
+}
+#sidebar{
+	align-content: left;
+    display: inline-block;
+    float: left;
+    width: 15%;
+    height: auto;
+}
+.page_text{
+	align-content:center;
+	text-align:center;
+	color:blue;
+	
+}
+#webpage{
+	background-color:aqua;
+	
+}
+#page_footer{
+	border: thin solid black;
+	align-content:center;
+	text-align:center;
+	}
+	

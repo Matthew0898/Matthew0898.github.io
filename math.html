@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Math</title>
+<link href="MultiPageCSS.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="/favicon.ico">
+</head>
+
+<body>
+
+
+<style>
+#navbar{
+	background-color:black;
+	}
+#navbar a{
+	color:white;
+	text-decoration:none;
+}
+
+</style>
+<nav id="navbar">
+	<a href="index.html">Home</a> |
+	<!-- <a href="about.html">About Me</a> | -->
+	<a href="math.html">Random Math Questions</a>
+</nav>
+
+
+
+<p ></p>
+<p id="demo"></p>
+<input type="number" id="myNumber"><button onclick="myFunction()">Check Answer</button>
+<p id="demos"></p>
+<script>
+var numCorrect=0;
+var numAsked=0;
+var operator=Math.floor(Math.random() * 4 + 1);
+var num1=Math.floor(Math.random() * 100 + 1);
+var num2=Math.floor(Math.random() * 100 + 1);
+var ans;
+var op;
+
+switch (operator) {
+    case 1:
+        op = "+";
+        ans=num1+num2;
+        break;
+    case 2:
+        var temp;
+        op = "-";
+        if (num2>num1){
+        temp=num1;
+        num1=num2;
+        num2=temp;
+}
+        ans=num1-num2;
+        break;
+    case 3:
+        op = "*";
+        ans=num1*num2;
+        break;
+    case 4:
+        op = "/";
+        ans=num1/num2;
+        ans=ans.toFixed(0);
+        if(ans != 0){
+         num1=ans*num2;
+         }
+         else{
+         num1=0;
+         }
+        break;
+
+}
+document.getElementById("demo").innerHTML = "" + num1 + op + num2+ "=";
+function myFunction() {
+    var num = document.getElementById("myNumber").value;
+
+    if(num==ans){
+        document.getElementById("demos").innerHTML= "Correct";
+    }
+    else{
+    document.getElementById("demos").innerHTML= "Wrong";
+    }
+}
+</script>
+
+<style>
+#globalFooter{
+	border:thin solid black;
+	}
+#home{ 
+	text-decoration:none;
+	color:black;
+	}
+#globalFooterText{
+	align-content:center;
+	text-align:center;
+	}
+
+</style>
+<footer id="globalFooter">
+	<a href="index.html" id="home"> &#127968; </a>
+    <p id= "globalFooterText"> Page designed by Matthew W. <br /> 2017 </p>
+</footer>
+
+</body>
+</html>
